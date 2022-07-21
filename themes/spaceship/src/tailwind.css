@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "DejaVu";
+    src: url("/fonts/DejaVu_Sans_Mono_for_Powerline.ttf");
+}

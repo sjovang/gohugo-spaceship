@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <div id="about">
+        <p class="text-cyan-600">~</p>
+        <p><span class="text-emerald-600">&#10132; cat</span> ./about.txt</p>
+        <div class="prose-xl prose-neutral">
+        {{ range where .Site.Pages "Type" "about" | first 1 }}
+            {{ .Content }}
+        {{ end }}
+        </div>
+    </div>
+
+    <div id="projects" class="mt-8">
+        <p><span class="text-emerald-600">&#10132; cd</span> Projects</p>
+        <p><span class="text-cyan-600">~/Projects</span> on <span class="text-fuchsia-700">main</span> <span class="text-rose-600">[!?]</span></p>
+        <p class="text-emerald-600">&#10132; ls -l</p>
+        <table class="w-full border-separate">
+            <tbody>
+                {{ range where .Site.RegularPages "Type" "projects" }}
+                    <tr>
+                        <td class="hidden md:table-cell align-top">{{ .Params.author }}</td>
+                        <td class="hidden md:table-cell align-top">{{ .Params.date.Format "Jan" }}</td>
+                        <td class="hidden md:table-cell align-top">{{ .Params.date.Format "2" }}</td>
+                        <td class="align-top">{{ .Params.date.Format "2006"}}</td>
+                        <td><a href="{{ .Permalink }}" class="text-blue-600 visited: text-blue-600">{{ .Params.title }}</a></td>
+                    </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+{{ end }}

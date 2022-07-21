@@ -3,19 +3,13 @@
 
 name = "Spaceship"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = "https://github.com/sjovang/gohugo-spaceship/blob/master/LICENSE.md"
+description = "Inspired by the Spacehip prompt for ZSH"
+homepage = "https://nubes.systems"
 tags = []
 features = []
-min_version = "0.41.0"
+min_version = "0.101.0"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Trond Jakob Sjøvang"
+  homepage = "https://trond.sjovang.no"

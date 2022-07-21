@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/spaceship.css">
+        <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    </head>
+    <body class="bg-neutral-900 p-8 lg:p-16 text-neutral-200 text-xl font-dejavu">
+        <div class="container mx-auto">
+        {{ block "main" . }}
+        
+        {{ end }}
         </div>
-        {{- partial "footer.html" . -}}
     </body>
 </html>
