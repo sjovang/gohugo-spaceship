@@ -21,7 +21,7 @@
                         <td class="hidden md:table-cell align-top">{{ .Params.date.Format "Jan" }}</td>
                         <td class="hidden md:table-cell align-top">{{ .Params.date.Format "2" }}</td>
                         <td class="align-top">{{ .Params.date.Format "2006"}}</td>
-                        <td><a href="{{ .Permalink }}" class="text-blue-600 visited: text-blue-600">{{ .Params.title }}</a></td>
+                        <td><a href="{{ .Permalink }}">{{ .Params.title }}</a></td>
                     </tr>
                 {{ end }}
             </tbody>
