@@ -1,7 +1,6 @@
 ---
-title: "foo-bar-baz"
+title: "big-secret-project"
 date: "2022-07-04T09:33:44Z"
-author: sjovang
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare blandit sollicitudin. Nullam consectetur tincidunt accumsan. Duis ut suscipit mauris, vitae eleifend est. Aliquam tortor ipsum, tincidunt ut nisi dignissim, imperdiet auctor tortor.
