@@ -1,0 +1,19 @@
+{{ define "main" }}
+    <div id="about">
+        <p class="text-cyan-600">~</p>
+        <p><span class="text-emerald-600 dark:text-emerald-400">&#10132; cat</span> ./about.md</p>
+        <div class="prose-xl prose-neutral">
+        {{ range where .Site.Pages "Type" "about" | first 1 }}
+            {{ .Content }}
+        {{ end }}
+        </div>
+    </div>
+
+    {{ range .Site.RegularPages.GroupBy "Type" }}
+        <div id="{{ .Key }}" class="mb-8">
+            <p class="text-cyan-500">~</p>
+            <h1><span class="text-emerald-600 dark:text-emerald-400">&#10132; ls <span class="hidden md:inline">-l</span> </span><a href="/{{ .Key }}/">{{ .Key }}</a></h1>
+            {{ partial "listpages.html" . }}
+        </div>
+    {{ end }}
+{{ end }}

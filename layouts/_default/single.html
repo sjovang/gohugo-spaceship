@@ -1,0 +1,31 @@
+{{ define "title" }}
+    {{ .Site.Title }} | {{ .Title | lower }}
+{{ end }}
+
+{{ define "main" }}
+
+<div class="mb-8">
+    <p class="text-cyan-600">~</p>
+    <h1><span class="text-emerald-600 dark:text-emerald-400">&#10132; cat</span> ./{{ .Type }}/{{ .Title | lower }}</h1>
+    <div class="prose-xl prose-neutral">
+        {{ .Content }}
+    </div>
+</div>
+
+<div>
+    <p class="text-cyan-600">~</p>
+    <h1><span class="text-emerald-600 dark:text-emerald-400">&#10132; stat</span> ./{{ .Type }}/{{ .Title | lower }}</h1>
+    <table class="w-full border-separate">
+        <tbody>
+            <tr>
+                <td class="pr-2">Birth:</td>
+                <td class="w-full">{{ .Params.publishdate }}</td>
+            </tr>
+            <tr>
+                <td class="pr-2">Modify:</td>
+                <td class="w-full">{{ .Params.lastmod }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{{ end }}

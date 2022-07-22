@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/spaceship.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+        <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    </head>
+    <body class="bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 text-xl font-dejavu">
+        <div class="container mx-auto px-8 lg:px-16 pb-8 lg:pb-16">
+            <nav class="flex flex-wrap justify-between md:justify-start gap-x-2 py-2 mb-8 lg:mb-16">
+                <a href="/" aria-label="Home Button"><i class="fa fa-home"></i></a>
+                <div class="flex md:hidden">
+                    <button id="hamburger" class="focus:outline-none">
+                        <i class="toggle block fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="toggle hidden md:flex w-full md:w-auto mt-4 md:mt-0">
+                    {{ range .Site.RegularPages.GroupBy "Type" }}
+                        <a class="block md:inline-block px-2 py-2 md:py-0" href="/{{ .Key }}">{{ .Key | lower }}</a>
+                    {{ end }}
+                </div>
+            </nav>
+            {{ block "main" . }}
+            
+            {{ end }}
+        </div>
+        <script src="/js/spaceship.js"></script>
+    </body>
+</html>
