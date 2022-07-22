@@ -7,10 +7,10 @@
     src: url("/fonts/DejaVu_Sans_Mono_for_Powerline.ttf");
 }
 
-a:link { @apply text-blue-600; }
-a:visited { @apply text-blue-600; }
-a:hover { @apply text-blue-600 underline decoration-dotted; }
-a:active { @apply text-blue-600; }
+a:link { @apply text-blue-700 dark:text-blue-400; }
+a:visited { @apply text-blue-700 dark:text-blue-400; }
+a:hover { @apply text-blue-700 dark:text-blue-400 underline decoration-dotted; }
+a:active { @apply text-blue-700 dark:text-blue-400; }
 
 h1 a:link { @apply text-neutral-900 dark:text-neutral-200; }
 h1 a:visited { @apply text-neutral-900 dark:text-neutral-200; }

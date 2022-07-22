@@ -6,7 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/sjovang/gohugo-spaceship/blob/master/LICENSE.md"
 description = "Inspired by the Spacehip prompt for ZSH"
 homepage = "https://nubes.systems"
-tags = []
+tags = ["Blog", "Minimal", "Responsive", "Dark mode"]
 features = []
 min_version = "0.101.0"
 

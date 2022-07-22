@@ -5,7 +5,7 @@
 {{ define "main" }}
     <div>
         <p class="text-cyan-600">~</p>
-        <h1><span class="text-emerald-600">&#10132; ls <span class="hidden md:inline">-l</span> </span>{{ .Title | lower }}</h1>
+        <h1><span class="text-emerald-600 dark:text-emerald-400">&#10132; ls <span class="hidden md:inline">-l</span> </span>{{ .Title | lower }}</h1>
         {{ partial "listpages.html" . }}
     </div>
 {{ end }}
