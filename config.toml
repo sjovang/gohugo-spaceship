@@ -3,3 +3,8 @@ languageCode = 'en-us'
 title = 'Nubes Systems'
 
 theme = 'spaceship'
+
+[author]
+name = "Trond Jakob Sjøvang"
+username = "tsg"
+email = "trond@sjovang.no"

@@ -1,7 +1,7 @@
 {{ define "main" }}
     <div id="about">
         <p class="text-cyan-600">~</p>
-        <p><span class="text-emerald-600">&#10132; cat</span> ./about.txt</p>
+        <p><span class="text-emerald-600">&#10132; cat</span> ./about.md</p>
         <div class="prose-xl prose-neutral">
         {{ range where .Site.Pages "Type" "about" | first 1 }}
             {{ .Content }}
@@ -9,22 +9,11 @@
         </div>
     </div>
 
-    <div id="projects" class="mt-8">
-        <p><span class="text-emerald-600">&#10132; cd</span> Projects</p>
-        <p><span class="text-cyan-600">~/Projects</span> on <span class="text-fuchsia-700">main</span> <span class="text-rose-600">[!?]</span></p>
-        <p class="text-emerald-600">&#10132; ls -l</p>
-        <table class="w-full border-separate">
-            <tbody>
-                {{ range where .Site.RegularPages "Type" "projects" }}
-                    <tr>
-                        <td class="hidden md:table-cell align-top">{{ .Params.author }}</td>
-                        <td class="hidden md:table-cell align-top">{{ .Params.date.Format "Jan" }}</td>
-                        <td class="hidden md:table-cell align-top">{{ .Params.date.Format "2" }}</td>
-                        <td class="align-top">{{ .Params.date.Format "2006"}}</td>
-                        <td><a href="{{ .Permalink }}">{{ .Params.title }}</a></td>
-                    </tr>
-                {{ end }}
-            </tbody>
-        </table>
-    </div>
+    {{ range .Site.RegularPages.GroupBy "Type" }}
+        <div id="{{ .Key }}" class="mb-8">
+            <p class="text-cyan-600">~</p>
+            <h1><span class="text-emerald-600">&#10132; ls <span class="hidden md:inline">-l</span> </span><a href="/{{ .Key }}/">{{ .Key }}</a></h1>
+            {{ partial "listpages.html" . }}
+        </div>
+    {{ end }}
 {{ end }}

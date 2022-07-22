@@ -1,7 +1,7 @@
 ---
 title: "foo-bar-baz"
-date: "2021-05-17T20:16:00+02:00"
-author: tsg
+date: "2022-07-04T09:33:44Z"
+author: sjovang
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare blandit sollicitudin. Nullam consectetur tincidunt accumsan. Duis ut suscipit mauris, vitae eleifend est. Aliquam tortor ipsum, tincidunt ut nisi dignissim, imperdiet auctor tortor.

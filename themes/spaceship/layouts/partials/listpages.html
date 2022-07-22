@@ -1,0 +1,19 @@
+<table class="w-full border-separate">
+    <tbody>
+        {{ range .Pages }}
+            <tr>
+                <td class="hidden md:table-cell align-top pr-2">
+                    {{ if isset .Params "author" }}
+                        {{ .Params.author }}
+                    {{ else }}
+                        {{ .Site.Author.username }}
+                    {{ end }}
+                </td>
+                <td class="hidden md:table-cell align-top pr-2">{{ .Params.date.Format "Jan" }}</td>
+                <td class="hidden md:table-cell align-top pr-2">{{ .Params.date.Format "2" }}</td>
+                <td class="hidden md:table-cell align-top pr-2">{{ .Params.date.Format "2006"}}</td>
+                <td class="w-full"><a href="{{ .Permalink }}">{{ .Params.title }}</a></td>
+            </tr>
+        {{ end }}
+    </tbody>
+</table>
