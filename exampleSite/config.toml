@@ -1,0 +1,10 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'Spaceship Demo'
+
+theme = 'gohugo-spaceship'
+
+[author]
+name = "Agent Smith"
+username = "asmith"
+email = "asmith@secret.lab"

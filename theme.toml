@@ -4,7 +4,7 @@
 name = "Spaceship"
 license = "MIT"
 licenselink = "https://github.com/sjovang/gohugo-spaceship/blob/master/LICENSE.md"
-description = "Inspired by the Spacehip prompt for ZSH"
+description = "Minimal theme inspired by the Spacehip prompt for Zsh"
 homepage = "https://github.com/sjovang/gohugo-spaceship"
 tags = ["Blog", "Minimal", "Responsive", "Dark mode"]
 features = []
@@ -12,8 +12,3 @@ features = []
 [author]
   name = "Trond Jakob Sjøvang"
   homepage = "https://trond.sjovang.no"
-
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.101.0"
