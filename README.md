@@ -2,10 +2,9 @@
 
 Minimal theme  for [gohugo.io](https://gohugo.io) inspired by the [Spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt) for zsh
 
-
 ## Screenshot
 
-![screenshot](./images/tn.png)
+![screenshot](https://raw.githubusercontent.com/sjovang/gohugo-spaceship/main/images/tn.png)
 
 ## Build css
 
